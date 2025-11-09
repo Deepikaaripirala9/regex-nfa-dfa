@@ -9,7 +9,7 @@ function App() {
 
   const handleConvert = async (type) => {
     if (!regex) return alert('Enter a regular expression');
-    const res = await axios.post('/api/convert', { regex, type });
+    const res = await axios.post('https://regex-nfa-dfa-backend-production.up.railway.app/api/convert', { regex, type });;
     setAutomaton(res.data);
   };
 
